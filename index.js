@@ -1,19 +1,106 @@
 // TODO: Include packages needed for this application
 const fs = require ('fs')
 const inquirer = require ('inquirer')
-const generatePage = require('./utils/generateMarkdowns.js')
+const generatePage = require('./utils/generateMarkdowns.js');
 
 // TODO: Create an array of questions for user input
-const questions = () = > {
-    {
-        //
-    }
-    {
-
-    }
-    {
-
-    }
+const questions = () => {
+    return inquirer.prompt([
+        {
+            type: ``,
+            name: ``,
+            message: ``,
+            validate: => {
+                if () {
+                    return true;
+                } else {
+                    console.log('');
+                    return false;
+                }
+            } 
+        }
+        {
+            type: ``,
+            name: ``,
+            message: ``,
+            validate: => {
+                if () {
+                    return true;
+                } else {
+                    console.log('');
+                    return false;
+                }
+            } 
+        }
+        {
+            type: ``,
+            name: ``,
+            message: ``,
+            validate: => {
+                if () {
+                    return true;
+                } else {
+                    console.log('');
+                    return false;
+                }
+            } 
+        }
+        {
+            type: ``,
+            name: ``,
+            message: ``,
+            validate: => {
+                if () {
+                    return true;
+                } else {
+                    console.log('');
+                    return false;
+                }
+            } 
+        }
+        {
+            type: ``,
+            name: ``,
+            message: ``,
+            choices: [],
+            default:['MIT'],
+            validate: => {
+                if () {
+                    return true;
+                } else {
+                    console.log('');
+                    return false;
+                }
+            } 
+        }
+        {
+            type: ``,
+            name: ``,
+            message: ``,
+            validate: => {
+                if () {
+                    return true;
+                } else {
+                    console.log('');
+                    return false;
+                }
+            } 
+        }
+        {
+            type: ``,
+            name: ``,
+            message: ``,
+            validate: => {
+                if () {
+                    return true;
+                } else {
+                    console.log('');
+                    return false;
+                }
+            } 
+        }
+    ])
+   
 
 };
 
