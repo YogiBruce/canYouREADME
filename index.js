@@ -10,8 +10,8 @@ const questions = () => {
             type: ``,
             name: ``,
             message: ``,
-            validate: => {
-                if () {
+            validate:userInput => {
+                if (userInput) {
                     return true;
                 } else {
                     console.log('');
@@ -23,8 +23,8 @@ const questions = () => {
             type: ``,
             name: ``,
             message: ``,
-            validate: => {
-                if () {
+            validate:userInput => {
+                if (userInput) {
                     return true;
                 } else {
                     console.log('');
@@ -36,8 +36,8 @@ const questions = () => {
             type: ``,
             name: ``,
             message: ``,
-            validate: => {
-                if () {
+            validate:userInput => {
+                if (userInput) {
                     return true;
                 } else {
                     console.log('');
@@ -49,8 +49,8 @@ const questions = () => {
             type: ``,
             name: ``,
             message: ``,
-            validate: => {
-                if () {
+            validate:userInput => {
+                if (userInput) {
                     return true;
                 } else {
                     console.log('');
@@ -64,8 +64,8 @@ const questions = () => {
             message: ``,
             choices: [],
             default:['MIT'],
-            validate: => {
-                if () {
+            validate:userInput => {
+                if (userInput) {
                     return true;
                 } else {
                     console.log('');
@@ -77,8 +77,8 @@ const questions = () => {
             type: ``,
             name: ``,
             message: ``,
-            validate: => {
-                if () {
+            validate:userInput => {
+                if (userInput) {
                     return true;
                 } else {
                     console.log('');
@@ -90,8 +90,8 @@ const questions = () => {
             type: ``,
             name: ``,
             message: ``,
-            validate: => {
-                if () {
+            validate:userInput => {
+                if (userInput) {
                     return true;
                 } else {
                     console.log('');
