@@ -4,14 +4,48 @@ const inquirer = require ('inquirer')
 const generatePage = require('./utils/generateMarkdowns.js')
 
 // TODO: Create an array of questions for user input
-const questions = [];
+const questions = () = > {
+    {
+        //
+    }
+    {
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+    }
+    {
 
-// TODO: Create a function to initialize app
-function init() {}
+    }
 
-// Function call to initialize app
-init();
+};
+
+//Function to write README file using FS
+const writeFile = data => {
+    fs.writeFile ('README.md', data, err=>{
+        //Concole error
+        if (err){
+            console.log(err);
+            return;
+        }else {
+        //Console ReadMe file has been created
+        console.log("Your README.md file has been successfully generated!")
+        }
+    })
+}
+
+//Function to initialize app
+questions()
+
+// Get user answers from input
+.then(answers => {
+    return generatePage(answers);
+})
+
+//Input to questions generated to file
+.then (data => {
+    return writeFile (data);
+})
+
+
+
+
+
 
