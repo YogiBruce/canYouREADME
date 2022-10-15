@@ -7,12 +7,12 @@ const generateMarkdown = data => {
   ${data.description}
 
   ## Table of Contents
-  *[Installation](#installation)
-  *[Usage Information](#usage)
-  *[License](#license)
-  *[Constributors](#contributors)
-  *[Tests](#tests)
-  *[Questions](#questions)
+  - [Installation](#installation)<br/>
+  - [Usage Information](#usage)<br/>
+  - [License](#license)<br/>
+  - [Contributors](#contributors)<br/>
+  - [Tests](#tests)<br/>
+  - [Questions](#questions)
 
   ## Installation
   ${data.install}
@@ -33,7 +33,7 @@ const generateMarkdown = data => {
 
   For any question regarding the ${data.title} project, please contact me via email at ${data.email}.
 
-  More of my software development projects can be viewed at my GitHub repo : ${data.github}
+  More of my software development projects can be viewed at my GitHub repo : https://github.com/${data.github}/
 
 `;
 }
