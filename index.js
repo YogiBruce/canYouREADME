@@ -10,7 +10,7 @@ const questions = () => {
             type: `input`,
             name: `email`,
             message: `What is your email address?`,
-            validate:userInput => {
+            validate: userInput => {
                 if (userInput) {
                     return true;
                 } else {
@@ -23,7 +23,7 @@ const questions = () => {
             type: `input`,
             name: `github`,
             message: `What is your GitHub username?`,
-            validate:userInput => {
+            validate: userInput => {
                 if (userInput) {
                     return true;
                 } else {
@@ -36,7 +36,7 @@ const questions = () => {
             type: `input`,
             name: `title`,
             message: `"What is the title of your project?`,
-            validate:userInput => {
+            validate: userInput => {
                 if (userInput) {
                     return true;
                 } else {
@@ -47,9 +47,9 @@ const questions = () => {
         }
         {
             type: `input`,
-            name: ``,
-            message: ``,
-            validate:userInput => {
+            name: `description`,
+            message: `Write a short description of your project and goals achieved`,
+            validate: userInput => {
                 if (userInput) {
                     return true;
                 } else {
@@ -60,11 +60,11 @@ const questions = () => {
         }
         {
             type: `list`,
-            name: ``,
-            message: ``,
-            choices: [],
+            name: `license`,
+            message: `Please select a user license`,
+            choices: ['MIT','Apache 2.0', 'GNU', 'Eclipse', 'Mozilla' ],
             default:['MIT'],
-            validate:userInput => {
+            validate: userInput => {
                 if (userInput) {
                     return true;
                 } else {
@@ -75,29 +75,48 @@ const questions = () => {
         }
         {
             type: `input`,
-            name: ``,
-            message: ``,
-            validate:userInput => {
+            name: `install`,
+            message: `What are the steps required for installation of your project?`,
+            validate: userInput => {
                 if (userInput) {
                     return true;
                 } else {
-                    console.log('');
+                    console.log('Please enter installation information');
                     return false;
                 }
             } 
         }
         {
             type: `input`,
-            name: ``,
-            message: ``,
-            validate:userInput => {
+            name: `usage`,
+            message: `Describe common usage information for your app?`,
+            validate: userInput => {
                 if (userInput) {
                     return true;
                 } else {
-                    console.log('');
+                    console.log('Please enter usage information');
                     return false;
                 }
             } 
+        }
+        {
+            type: 'input',
+            name: 'constributors',
+            message: 'Please provide requirements of user contributions to application',
+            validate: userInput => {
+                if (userInput){
+                    return true;
+                } else {
+                    console.log('Please enter user contribution instructions!')
+                    return false;
+                }
+            }
+        }
+        {
+            type: 'input',
+            name: 'test',
+            message: 'What are common test practices for app?',
+            default: 'npm test',
         }
     ])
    
