@@ -1,9 +1,9 @@
 // TODO: Include packages needed for this application
-const fs = require ('fs')
-const inquirer = require ('inquirer')
+const fs = require('fs')
+const inquirer = require('inquirer')
 const generatePage = require('./utils/generateMarkdowns.js');
 
-// TODO: Create an array of questions for user input
+// Questions for user input using Inquirer
 const questions = () => {
     return inquirer.prompt([
         {
@@ -17,8 +17,8 @@ const questions = () => {
                     console.log('Please enter a valid email!');
                     return false;
                 }
-            } 
-        }
+            }
+        },
         {
             type: `input`,
             name: `github`,
@@ -30,8 +30,8 @@ const questions = () => {
                     console.log('Please enter your GitHub username!');
                     return false;
                 }
-            } 
-        }
+            }
+        },
         {
             type: `input`,
             name: `title`,
@@ -43,8 +43,8 @@ const questions = () => {
                     console.log('Please enter a project title!');
                     return false;
                 }
-            } 
-        }
+            }
+        },
         {
             type: `input`,
             name: `description`,
@@ -56,14 +56,14 @@ const questions = () => {
                     console.log('');
                     return false;
                 }
-            } 
-        }
+            }
+        },
         {
             type: `list`,
             name: `license`,
             message: `Please select a user license`,
-            choices: ['MIT','Apache 2.0', 'GNU', 'Eclipse', 'Mozilla' ],
-            default:['MIT'],
+            choices: ['MIT', 'Apache 2.0', 'GNU', 'Eclipse', 'Mozilla'],
+            default: ['MIT'],
             validate: userInput => {
                 if (userInput) {
                     return true;
@@ -71,8 +71,8 @@ const questions = () => {
                     console.log('');
                     return false;
                 }
-            } 
-        }
+            }
+        },
         {
             type: `input`,
             name: `install`,
@@ -84,8 +84,8 @@ const questions = () => {
                     console.log('Please enter installation information');
                     return false;
                 }
-            } 
-        }
+            }
+        },
         {
             type: `input`,
             name: `usage`,
@@ -97,42 +97,40 @@ const questions = () => {
                     console.log('Please enter usage information');
                     return false;
                 }
-            } 
-        }
+            }
+        },
         {
             type: 'input',
             name: 'constributors',
             message: 'Please provide requirements of user contributions to application',
             validate: userInput => {
-                if (userInput){
+                if (userInput) {
                     return true;
                 } else {
                     console.log('Please enter user contribution instructions!')
                     return false;
                 }
             }
-        }
+        },
         {
             type: 'input',
             name: 'test',
             message: 'What are common test practices for app?',
             default: 'npm test',
-        }
-    ])
-   
-
+        },
+    ]);
 };
 
 //Function to write README file using FS
 const writeFile = data => {
-    fs.writeFile ('README.md', data, err=>{
+    fs.writeFile('README.md', data, err => {
         //Concole error
-        if (err){
+        if (err) {
             console.log(err);
             return;
-        }else {
-        //Console ReadMe file has been created
-        console.log("Your README.md file has been successfully generated!")
+        } else {
+            //Console ReadMe file has been created
+            console.log("Your README.md file has been successfully generated!")
         }
     })
 }
@@ -140,18 +138,12 @@ const writeFile = data => {
 //Function to initialize app
 questions()
 
-// Get user answers from input
-.then(answers => {
-    return generatePage(answers);
-})
+    // Get user answers from input
+    .then(answers => {
+        return generatePage(answers);
+    })
 
-//Input to questions generated to file
-.then (data => {
-    return writeFile (data);
-})
-
-
-
-
-
-
+    //Input to questions generated to file
+    .then(data => {
+        return writeFile(data);
+    })
