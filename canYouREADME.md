@@ -3,6 +3,8 @@
 
   ## Description
   Using node.js, inquirer, and FS; user input is collected to automatically generate a professional looking README.md file.
+  
+  <img src="assets\README generator.gif">
 
   ## Table of Contents
   - [Installation](#installation)<br/>
