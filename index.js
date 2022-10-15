@@ -7,7 +7,46 @@ const generatePage = require('./utils/generateMarkdowns.js');
 const questions = () => {
     return inquirer.prompt([
         {
-            type: ``,
+            type: `input`,
+            name: `email`,
+            message: `What is your email address?`,
+            validate:userInput => {
+                if (userInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a valid email!');
+                    return false;
+                }
+            } 
+        }
+        {
+            type: `input`,
+            name: `github`,
+            message: `What is your GitHub username?`,
+            validate:userInput => {
+                if (userInput) {
+                    return true;
+                } else {
+                    console.log('Please enter your GitHub username!');
+                    return false;
+                }
+            } 
+        }
+        {
+            type: `input`,
+            name: `title`,
+            message: `"What is the title of your project?`,
+            validate:userInput => {
+                if (userInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a project title!');
+                    return false;
+                }
+            } 
+        }
+        {
+            type: `input`,
             name: ``,
             message: ``,
             validate:userInput => {
@@ -20,46 +59,7 @@ const questions = () => {
             } 
         }
         {
-            type: ``,
-            name: ``,
-            message: ``,
-            validate:userInput => {
-                if (userInput) {
-                    return true;
-                } else {
-                    console.log('');
-                    return false;
-                }
-            } 
-        }
-        {
-            type: ``,
-            name: ``,
-            message: ``,
-            validate:userInput => {
-                if (userInput) {
-                    return true;
-                } else {
-                    console.log('');
-                    return false;
-                }
-            } 
-        }
-        {
-            type: ``,
-            name: ``,
-            message: ``,
-            validate:userInput => {
-                if (userInput) {
-                    return true;
-                } else {
-                    console.log('');
-                    return false;
-                }
-            } 
-        }
-        {
-            type: ``,
+            type: `list`,
             name: ``,
             message: ``,
             choices: [],
@@ -74,7 +74,7 @@ const questions = () => {
             } 
         }
         {
-            type: ``,
+            type: `input`,
             name: ``,
             message: ``,
             validate:userInput => {
@@ -87,7 +87,7 @@ const questions = () => {
             } 
         }
         {
-            type: ``,
+            type: `input`,
             name: ``,
             message: ``,
             validate:userInput => {
