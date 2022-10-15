@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs')
 const inquirer = require('inquirer')
-const generatePage = require('./utils/generateMarkdowns.js');
+const generatePage = require('./utils/generateMarkdown.js');
 
 // Questions for user input using Inquirer
 const questions = () => {
@@ -48,7 +48,7 @@ const questions = () => {
         {
             type: `input`,
             name: `description`,
-            message: `Write a short description of your project and goals achieved`,
+            message: `Write a short description of your project and goals achieved:`,
             validate: userInput => {
                 if (userInput) {
                     return true;
@@ -101,8 +101,8 @@ const questions = () => {
         },
         {
             type: 'input',
-            name: 'constributors',
-            message: 'Please provide requirements of user contributions to application',
+            name: 'contributors',
+            message: 'Please provide requirements of user contributions to application:',
             validate: userInput => {
                 if (userInput) {
                     return true;
